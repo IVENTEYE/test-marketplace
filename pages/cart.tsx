@@ -102,17 +102,15 @@ const Cart: NextPage = () => {
             <h3 className="order-body__title">Выберите способ оплаты:</h3>
             {currencies.map((item: IWalletCard) => {
               return (
-                <div className="order-body__items">
+                <div key={item.name} className="order-body__items">
                   <label htmlFor={item.name}>
                     <WalletCard
-                      key={item.name}
                       image={item.image}
                       name={item.name}
                       account={item.account}
                     />
                   </label>
                   <input
-                    key={item.name}
                     type="radio"
                     name="currency"
                     value={item.name}
