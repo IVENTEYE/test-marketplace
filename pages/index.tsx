@@ -36,7 +36,7 @@ export default function Home({ cardsResponse }) {
                 Все товары
               </h1>
             </div>
-            <div className="catalog__sneakers sneakers-catalog">
+            <div className="catalog__products products-catalog">
               {cards.map((item) => {
                 return item.map((item: ICard) => {
                   return <Card key={item.id} id={item.id} title={item.title} price={item.price} />;
